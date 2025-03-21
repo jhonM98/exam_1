@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "menus_diarios",
+  "info": {
+    "singularName": "menu-diario",
+    "pluralName": "menus-diarios",
+    "displayName": "MenusDiarios",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "MenuOfTheDay": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "sumPrice": {
+      "type": "decimal"
+    },
+    "date": {
+      "type": "string"
+    },
+    "firstcourse": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::plato.plato"
+    },
+    "secondcourse": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::plato.plato"
+    },
+    "dessert": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::plato.plato"
+    }
+  }
+}
